@@ -4,21 +4,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Portfolio profesional de Aisha Rahal.">
-<title>Aisha Rahal | Portfolio</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>AishaRahal | Portfolio</title>
 
 <style>
 :root {
-  --bg: #09090f;
-  --card: #13131e;
-  --purple: #a78bfa;
-  --text: #f5f3ff;
-  --muted: #a1a1b5;
-  --border: #29283a;
+  --blue: #3978d6;
+  --dark: #202b3b;
+  --gray: #687589;
+  --light: #f5f8fc;
+  --white: #ffffff;
 }
 
 * {
@@ -27,636 +21,798 @@
   box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
-
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  background: var(--white);
+  color: var(--dark);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.container {
-  width: min(1100px, 90%);
-  margin: auto;
-}
-
-/* NAVBAR */
-
-nav {
-  padding: 22px 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.nav-content {
+header {
+  width: 100%;
+  padding: 22px 8%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8edf4;
+  background: white;
 }
 
 .logo {
-  font-size: 23px;
-  font-weight: 800;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--blue);
 }
 
-.logo span { color: var(--purple); }
-
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
-  color: var(--muted);
-  font-size: 13px;
-  transition: .3s;
-}
-
-.nav-links a:hover { color: var(--purple); }
-
-/* HERO */
-
-.hero {
-  min-height: 490px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 80px 0;
-}
-
-.tag {
-  display: inline-block;
-  width: fit-content;
-  padding: 7px 15px;
-  border-radius: 30px;
-  border: 1px solid #a78bfa55;
-  background: #a78bfa15;
-  color: var(--purple);
-  font-size: 12px;
-  margin-bottom: 25px;
-}
-
-.hero h1 {
-  font-size: clamp(42px, 7vw, 72px);
-  line-height: 1.12;
-  letter-spacing: -3px;
-}
-
-.hero h1 span { color: var(--purple); }
-
-.hero p {
-  color: var(--muted);
-  max-width: 590px;
-  margin: 25px 0 30px;
-  font-size: 15px;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-.btn {
-  padding: 13px 22px;
-  border-radius: 9px;
-  font-size: 13px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  transition: .3s;
-}
-
-.btn-primary {
-  background: var(--purple);
-  color: #100d19;
-}
-
-.btn-primary:hover {
-  background: #c4b5fd;
-  transform: translateY(-3px);
-}
-
-.btn-outline {
-  border: 1px solid var(--border);
-}
-
-.btn-outline:hover { border-color: var(--purple); }
-
-/* PROJECTS */
-
-.projects {
-  padding: 80px 0 100px;
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  margin-bottom: 30px;
-}
-
-.section-header h2 {
-  font-size: 32px;
-  letter-spacing: -1px;
-}
-
-.section-header p {
-  color: var(--muted);
-  font-size: 13px;
-  margin-top: 8px;
-}
-
-.counter {
-  color: var(--purple);
-  font-size: 13px;
-}
-
-.search-box {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  padding: 14px 17px;
-  border-radius: 10px;
-  margin-bottom: 28px;
-}
-
-.search-box i { color: var(--muted); }
-
-.search-box input {
-  width: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: white;
-  font-family: inherit;
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  margin-left: 25px;
   font-size: 14px;
 }
 
-.grid {
+nav a:hover {
+  color: var(--blue);
+}
+
+.hero {
+  padding: 85px 8% 65px;
+  background: #f5f8fc;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+  box-shadow: 0 5px 20px #0001;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: var(--gray);
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+.github-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: var(--blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+.github-link:hover {
+  background: #245eae;
+}
+
+.stats {
+  display: flex;
+  gap: 35px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.stat strong {
+  display: block;
+  font-size: 22px;
+  color: var(--blue);
+}
+
+.stat span {
+  font-size: 12px;
+  color: var(--gray);
+}
+
+section {
+  padding: 65px 8%;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  color: var(--gray);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.search-area {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.search-area input {
+  flex: 1;
+  min-width: 200px;
+  padding: 14px;
+  border: 1px solid #dce3ed;
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-area input:focus {
+  border-color: var(--blue);
+}
+
+.search-area select {
+  padding: 12px;
+  border: 1px solid #dce3ed;
+  border-radius: 7px;
+  background: white;
+}
+
+.projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
 }
 
 .project-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  min-height: 260px;
-  transition: .3s;
+  background: white;
+  border: 1px solid #e7ebf1;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .25s;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--purple);
-  box-shadow: 0 15px 35px #0005;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px #00000012;
 }
 
-.card-top {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 23px;
+.project-image {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+  background: #eaf1fc;
+  display: block;
 }
 
-.folder {
-  color: var(--purple);
-  font-size: 26px;
+.project-info {
+  padding: 20px;
 }
 
-.github-icon {
-  color: var(--muted);
-  font-size: 21px;
-}
-
-.project-card h3 {
-  font-size: 17px;
-  margin-bottom: 12px;
+.project-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
   overflow-wrap: anywhere;
 }
 
-.project-card p {
-  color: var(--muted);
+.project-info p {
   font-size: 13px;
-  line-height: 1.8;
-  margin-bottom: 25px;
-}
-
-.card-footer {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
+  color: var(--gray);
+  line-height: 1.6;
+  min-height: 42px;
 }
 
 .language {
-  color: var(--purple);
-  font-size: 12px;
+  display: inline-block;
+  background: #edf4ff;
+  color: var(--blue);
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  margin-top: 15px;
 }
 
-.repo-link {
-  font-size: 12px;
-  font-weight: 600;
-  transition: .3s;
+.project-button {
+  display: block;
+  width: 100%;
+  padding: 11px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 6px;
+  background: #edf4ff;
+  color: var(--blue);
+  cursor: pointer;
+  font-weight: bold;
 }
 
-.repo-link:hover { color: var(--purple); }
+.project-button:hover {
+  background: var(--blue);
+  color: white;
+}
 
-.empty {
-  grid-column: 1/-1;
+.status {
   text-align: center;
-  color: var(--muted);
-  padding: 60px 15px;
+  padding: 35px;
+  color: var(--gray);
+  grid-column: 1 / -1;
 }
-
-/* ABOUT */
 
 .about {
-  border-top: 1px solid var(--border);
-  padding: 80px 0;
+  background: var(--light);
 }
 
-.about-content { max-width: 700px; }
-
-.about h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.about-content {
+  max-width: 750px;
+  line-height: 1.8;
+  color: var(--gray);
 }
-
-.about p {
-  color: var(--muted);
-  font-size: 15px;
-}
-
-/* FOOTER */
 
 footer {
-  padding: 35px 0;
   text-align: center;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
+  padding: 30px;
+  color: var(--gray);
   font-size: 13px;
+  border-top: 1px solid #e8edf4;
 }
 
-footer .social {
-  font-size: 25px;
+/* VENTANA DE DETALLES */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #101827bb;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 13px;
+  position: relative;
+  animation: aparecer .2s ease;
+}
+
+@keyframes aparecer {
+  from { transform: translateY(15px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  background: #edf3fc;
+}
+
+.modal-body {
+  padding: 25px;
+}
+
+.modal-body h2 {
+  margin-bottom: 15px;
+  overflow-wrap: anywhere;
+}
+
+.modal-body p {
+  color: var(--gray);
+  line-height: 1.7;
   margin-bottom: 15px;
 }
 
-footer a { color: var(--purple); }
-
-/* RESPONSIVE */
-
-@media(max-width: 850px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
+.close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 2;
 }
 
-@media(max-width: 550px) {
-  .grid { grid-template-columns: 1fr; }
+.details {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+  font-size: 13px;
+  color: var(--gray);
+}
 
-  .section-header {
-    flex-direction: column;
-    align-items: start;
-    gap: 12px;
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.modal-actions a {
+  text-decoration: none;
+  background: var(--blue);
+  color: white;
+  padding: 12px 17px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.modal-actions a.secondary {
+  background: #edf4ff;
+  color: var(--blue);
+}
+
+.readme {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f5f8fc;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: #596579;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media(max-width: 600px) {
+  header {
+    padding: 18px 5%;
   }
 
-  .hero h1 { letter-spacing: -2px; }
+  nav a {
+    margin-left: 10px;
+    font-size: 12px;
+  }
 
-  .nav-links { gap: 12px; }
+  .hero {
+    padding: 55px 6%;
+  }
 
-  .nav-links a { font-size: 11px; }
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  section {
+    padding: 45px 6%;
+  }
+
+  .modal-image {
+    height: 190px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<header>
+  <div class="logo">AishaRahal</div>
 
-<nav>
-  <div class="container nav-content">
-    <a href="#" class="logo">Aisha<span>.</span></a>
-
-    <div class="nav-links">
-      <a href="#proyectos">Proyectos</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="https://github.com/AishaRahal"
-         target="_blank">GitHub ↗</a>
-    </div>
-  </div>
-</nav>
-
-<!-- PRESENTACION -->
-
-<header class="container hero">
-
-  <span class="tag">
-    <i class="fa-solid fa-code"></i>
-    PORTFOLIO DE DESARROLLO
-  </span>
-
-  <h1>
-    Hola, soy<br>
-    <span>Aisha Rahal.</span>
-  </h1>
-
-  <p>
-    Bienvenido/a a mi portfolio personal. Aquí encontrarás
-    mis proyectos, trabajos y desarrollos realizados.
-    Explora mis repositorios y descubre lo que puedo crear
-    a través de la programación.
-  </p>
-
-  <div class="buttons">
-
-    <a href="#proyectos" class="btn btn-primary">
-      Explorar proyectos
-      <i class="fa-solid fa-arrow-down"></i>
-    </a>
-
-    <a href="https://github.com/AishaRahal"
-       target="_blank" class="btn btn-outline">
-      <i class="fa-brands fa-github"></i>
-      Mi GitHub
-    </a>
-
-  </div>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#sobre">Sobre mí</a>
+  </nav>
 </header>
 
-<!-- PROYECTOS -->
+<main>
+<section class="hero" id="inicio">
 
-<section class="projects" id="proyectos">
+  <img
+    id="avatar"
+    class="avatar"
+    src="https://github.com/AishaRahal.png"
+    alt="Foto de perfil"
+  >
 
-  <div class="container">
+  <div class="hero-content">
+    <h1 id="name">AishaRahal</h1>
 
-    <div class="section-header">
-      <div>
-        <h2>Mis proyectos<span style="color:#a78bfa">.</span></h2>
-        <p>Descubre los trabajos que he realizado.</p>
+    <p id="bio">
+      Bienvenido a mi portafolio. Acá podés conocer mis proyectos,
+      trabajos y experiencias de programación.
+    </p>
+
+    <a
+      class="github-link"
+      href="https://github.com/AishaRahal"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Ver perfil de GitHub
+    </a>
+
+    <div class="stats">
+      <div class="stat">
+        <strong id="repo-count">0</strong>
+        <span>Repositorios públicos</span>
       </div>
 
-      <span class="counter" id="counter">
-        Cargando proyectos...
-      </span>
-    </div>
-
-    <div class="search-box">
-      <i class="fa-solid fa-magnifying-glass"></i>
-
-      <input
-        type="text"
-        id="search"
-        placeholder="Buscar por nombre o tecnología..."
-      >
-    </div>
-
-    <div class="grid" id="projects-grid">
-
-      <div class="empty">
-        <i class="fa-solid fa-spinner fa-spin"></i>
-        <p>Cargando repositorios de GitHub...</p>
+      <div class="stat">
+        <strong id="followers">0</strong>
+        <span>Seguidores</span>
       </div>
 
+      <div class="stat">
+        <strong id="following">0</strong>
+        <span>Siguiendo</span>
+      </div>
     </div>
-
   </div>
 </section>
 
-<!-- SOBRE MI -->
+<section id="proyectos">
+  <h2 class="section-title">Mis proyectos</h2>
 
-<section class="about" id="sobre-mi">
+  <p class="section-description">
+    Explorá mis trabajos y conocé cómo fueron realizados.
+    Seleccioná cualquier proyecto para ver sus detalles.
+  </p>
 
-  <div class="container">
+  <div class="search-area">
+    <input
+      type="text"
+      id="search"
+      placeholder="Buscar un proyecto..."
+      aria-label="Buscar proyectos"
+    >
 
-    <div class="about-content">
+    <select id="sort">
+      <option value="updated">Más recientes</option>
+      <option value="name">Nombre A-Z</option>
+      <option value="stars">Más estrellas</option>
+    </select>
+  </div>
 
-      <span class="tag">SOBRE MÍ</span>
-
-      <h2>
-        Ideas que se convierten en proyectos.
-      </h2>
-
-      <p>
-        Soy Aisha Rahal. Este portfolio reúne mis trabajos
-        y proyectos publicados en GitHub. Me apasiona
-        aprender, explorar nuevas tecnologías y desarrollar
-        soluciones creativas mediante la programación.
-      </p>
-
-    </div>
-
+  <div class="projects" id="projects">
+    <div class="status">Cargando proyectos...</div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<section class="about" id="sobre">
+  <h2 class="section-title">Sobre mí</h2>
+
+  <p class="about-content">
+    Este espacio reúne mis proyectos y trabajos publicados en GitHub.
+    Cada proyecto cuenta con información sobre su desarrollo,
+    descripción y tecnologías utilizadas.
+  </p>
+</section>
+</main>
 
 <footer>
-  <div class="container">
-
-    <div class="social">
-      <a href="https://github.com/AishaRahal"
-         target="_blank">
-        <i class="fa-brands fa-github"></i>
-      </a>
-    </div>
-
-    <p>
-      Desarrollado por
-      <a href="https://github.com/AishaRahal">
-        Aisha Rahal
-      </a>
-    </p>
-
-    <p>
-      © <span id="year"></span> Todos los derechos reservados.
-    </p>
-
-  </div>
+  © 2026 AishaRahal - Portfolio personal
 </footer>
 
-<!-- JAVASCRIPT -->
+<!-- VENTANA EMERGENTE -->
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-modal="true"
+       aria-labelledby="modal-title">
+
+    <button class="close" id="close-modal"
+            aria-label="Cerrar ventana">&times;</button>
+
+    <img class="modal-image" id="modal-image" src="" alt="Imagen del proyecto">
+
+    <div class="modal-body">
+      <h2 id="modal-title"></h2>
+
+      <p id="modal-description"></p>
+
+      <div class="details">
+        <span id="modal-language"></span>
+        <span id="modal-stars"></span>
+        <span id="modal-forks"></span>
+      </div>
+
+      <div class="modal-actions">
+        <a id="repo-link" href="#" target="_blank"
+           rel="noopener noreferrer">Ver código</a>
+
+        <a id="demo-link" class="secondary" href="#"
+           target="_blank" rel="noopener noreferrer"
+           hidden>Ver página</a>
+      </div>
+
+      <div id="readme" class="readme" hidden></div>
+    </div>
+  </div>
+</div>
 
 <script>
-
 const USERNAME = "AishaRahal";
 
-const grid = document.getElementById("projects-grid");
-const counter = document.getElementById("counter");
-const search = document.getElementById("search");
+const API = "https://api.github.com";
+
+const projectsContainer = document.getElementById("projects");
+const searchInput = document.getElementById("search");
+const sortSelect = document.getElementById("sort");
 
 let repositories = [];
+let currentImageFallback = "";
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+const $ = (id) => document.getElementById(id);
 
-// CARGAR REPOSITORIOS
+// Podés colocar imágenes propias para cada repositorio.
+// Ejemplo:
+// "huerta": "imagenes/huerta.jpg"
 
-async function loadProjects() {
-
-  try {
-
-    let page = 1;
-    let allRepos = [];
-
-    while (true) {
-
-      const response = await fetch(
-        `https://api.github.com/users/${USERNAME}/repos?per_page=100&page=${page}&sort=updated`
-      );
-
-      if (!response.ok) {
-        throw new Error("No se pudieron cargar los repositorios.");
-      }
-
-      const data = await response.json();
-
-      allRepos = allRepos.concat(data);
-
-      if (data.length < 100) break;
-
-      page++;
-    }
-
-    repositories = allRepos
-      .filter(repo => !repo.fork)
-      .sort((a, b) =>
-        new Date(b.updated_at) - new Date(a.updated_at)
-      );
-
-    renderProjects(repositories);
-
-  } catch (error) {
-
-    grid.innerHTML = `
-      <div class="empty">
-        <i class="fa-solid fa-triangle-exclamation"></i>
-        <p>${escapeHTML(error.message)}</p>
-        <a href="https://github.com/${USERNAME}"
-           target="_blank">
-           Visitar GitHub
-        </a>
-      </div>
-    `;
-
-    counter.textContent = "";
-
-  }
-}
-
-// MOSTRAR PROYECTOS
-
-function renderProjects(projects) {
-
-  counter.textContent = projects.length + " proyectos";
-
-  if (projects.length === 0) {
-
-    grid.innerHTML = `
-      <div class="empty">
-        No se encontraron proyectos.
-      </div>
-    `;
-
-    return;
-  }
-
-  grid.innerHTML = projects.map(repo => {
-
-    const description = repo.description ||
-      "Explora este repositorio para conocer más sobre este proyecto.";
-
-    return `
-
-      <article class="project-card">
-
-        <div class="card-top">
-
-          <i class="fa-regular fa-folder folder"></i>
-
-          <i class="fa-brands fa-github github-icon"></i>
-
-        </div>
-
-        <h3>${escapeHTML(repo.name)}</h3>
-
-        <p>${escapeHTML(description)}</p>
-
-        <div class="card-footer">
-
-          <span class="language">
-            ${escapeHTML(repo.language || "Código")}
-          </span>
-
-          <a
-            href="${repo.html_url}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="repo-link"
-          >
-            Ver repositorio
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-
-        </div>
-
-      </article>
-
-    `;
-
-  }).join("");
-
-}
-
-// PROTEGER TEXTO HTML
+const projectImages = {
+  // "nombre-del-repositorio": "imagenes/imagen.jpg"
+};
 
 function escapeHTML(value) {
-
-  return String(value).replace(/[&<>"']/g, char => ({
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
     "&": "&amp;",
     "<": "&lt;",
     ">": "&gt;",
     '"': "&quot;",
-    "'": "&#039;"
+    "'": "&#39;"
   })[char]);
-
 }
 
-// BUSCADOR
+function getProjectImage(repo) {
+  return projectImages[repo.name] ||
+    `https://opengraph.githubassets.com/1/${USERNAME}/${repo.name}`;
+}
 
-search.addEventListener("input", () => {
+function fallbackImage(image) {
+  image.onerror = () => {
+    image.onerror = null;
+    image.src = `https://github.com/${USERNAME}.png`;
+  };
+}
 
-  const value = search.value.toLowerCase().trim();
+async function loadProfile() {
+  const response = await fetch(`${API}/users/${USERNAME}`);
 
-  const filtered = repositories.filter(repo => {
+  if (!response.ok) {
+    throw new Error("No se pudo cargar el perfil de GitHub.");
+  }
 
-    return (
-      repo.name.toLowerCase().includes(value) ||
-      (repo.description || "").toLowerCase().includes(value) ||
-      (repo.language || "").toLowerCase().includes(value)
+  const user = await response.json();
+
+  $("avatar").src = user.avatar_url;
+  $("name").textContent = user.name || user.login;
+  $("bio").textContent = user.bio ||
+    "Bienvenido a mi portafolio personal.";
+
+  $("repo-count").textContent = user.public_repos;
+  $("followers").textContent = user.followers;
+  $("following").textContent = user.following;
+}
+
+async function loadRepositories() {
+  let page = 1;
+  let allRepos = [];
+
+  // Carga todas las páginas disponibles, hasta 100 repositorios por página.
+  while (true) {
+    const response = await fetch(
+      `${API}/users/${USERNAME}/repos?per_page=100&page=${page}&sort=updated`
     );
 
+    if (!response.ok) {
+      throw new Error(
+        response.status === 403 || response.status === 429
+          ? "GitHub limitó temporalmente las consultas. Probá nuevamente más tarde."
+          : "No se pudieron cargar los repositorios."
+      );
+    }
+
+    const data = await response.json();
+
+    allRepos = allRepos.concat(data);
+
+    if (data.length < 100) break;
+
+    page++;
+  }
+
+  repositories = allRepos.filter(repo => !repo.fork);
+
+  renderProjects();
+}
+
+function renderProjects() {
+  const search = searchInput.value.toLowerCase().trim();
+  const sort = sortSelect.value;
+
+  let filtered = repositories.filter(repo =>
+    repo.name.toLowerCase().includes(search) ||
+    (repo.description || "").toLowerCase().includes(search) ||
+    (repo.language || "").toLowerCase().includes(search)
+  );
+
+  if (sort === "name") {
+    filtered.sort((a,b) => a.name.localeCompare(b.name));
+  }
+
+  if (sort === "stars") {
+    filtered.sort((a,b) => b.stargazers_count - a.stargazers_count);
+  }
+
+  if (sort === "updated") {
+    filtered.sort((a,b) =>
+      new Date(b.updated_at) - new Date(a.updated_at)
+    );
+  }
+
+  projectsContainer.innerHTML = "";
+
+  if (!filtered.length) {
+    projectsContainer.innerHTML =
+      '<div class="status">No se encontraron proyectos.</div>';
+    return;
+  }
+
+  filtered.forEach(repo => {
+    const card = document.createElement("article");
+    card.className = "project-card";
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", `Ver ${repo.name}`);
+
+    const image = getProjectImage(repo);
+
+    card.innerHTML = `
+      <img class="project-image"
+           src="${escapeHTML(image)}"
+           alt="Vista previa de ${escapeHTML(repo.name)}">
+
+      <div class="project-info">
+        <h3>${escapeHTML(repo.name)}</h3>
+
+        <p>${escapeHTML(
+          repo.description || "Proyecto publicado en GitHub."
+        )}</p>
+
+        <span class="language">
+          ${escapeHTML(repo.language || "Sin lenguaje definido")}
+        </span>
+
+        <button class="project-button" type="button">
+          Ver detalles
+        </button>
+      </div>
+    `;
+
+    const cardImage = card.querySelector("img");
+    fallbackImage(cardImage);
+
+    card.addEventListener("click", () => openProject(repo));
+    card.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openProject(repo);
+      }
+    });
+
+    projectsContainer.appendChild(card);
   });
+}
 
-  renderProjects(filtered);
+async function openProject(repo) {
+  const modal = $("modal");
 
+  const image = getProjectImage(repo);
+
+  $("modal-image").src = image;
+  fallbackImage($("modal-image"));
+
+  $("modal-title").textContent = repo.name;
+
+  $("modal-description").textContent =
+    repo.description ||
+    "Este proyecto forma parte de los repositorios públicos de AishaRahal.";
+
+  $("modal-language").textContent =
+    "Lenguaje: " + (repo.language || "No especificado");
+
+  $("modal-stars").textContent =
+    "⭐ " + repo.stargazers_count + " estrellas";
+
+  $("modal-forks").textContent =
+    "Forks: " + repo.forks_count;
+
+  $("repo-link").href = repo.html_url;
+
+  const demo = $("demo-link");
+
+  if (repo.homepage && repo.homepage.startsWith("https://")) {
+    demo.href = repo.homepage;
+    demo.hidden = false;
+  } else {
+    demo.hidden = true;
+  }
+
+  $("readme").hidden = true;
+  $("readme").textContent = "Cargando información del proyecto...";
+
+  modal.classList.add("active");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+
+  try {
+    const response = await fetch(
+      `${API}/repos/${USERNAME}/${encodeURIComponent(repo.name)}/readme`
+    );
+
+    if (response.ok) {
+      const data = await response.json();
+
+      const binary = atob(data.content.replace(/\s/g, ""));
+      const bytes = Uint8Array.from(binary, c => c.charCodeAt(0));
+      const readmeText = new TextDecoder().decode(bytes);
+
+      $("readme").textContent =
+        readmeText.slice(0, 1800) +
+        (readmeText.length > 1800 ? "\n\n... (contenido resumido)" : "");
+
+      $("readme").hidden = false;
+    } else {
+      $("readme").hidden = true;
+    }
+  } catch (error) {
+    $("readme").hidden = true;
+  }
+}
+
+function closeModal() {
+  $("modal").classList.remove("active");
+  $("modal").setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+$("close-modal").addEventListener("click", closeModal);
+
+$("modal").addEventListener("click", event => {
+  if (event.target === $("modal")) closeModal();
 });
 
-// INICIAR
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closeModal();
+});
 
-loadProjects();
+searchInput.addEventListener("input", renderProjects);
+sortSelect.addEventListener("change", renderProjects);
 
+async function init() {
+  try {
+    await Promise.all([
+      loadProfile(),
+      loadRepositories()
+    ]);
+  } catch (error) {
+    projectsContainer.innerHTML = `
+      <div class="status">
+        ${escapeHTML(error.message)}
+        <br><br>
+        <button onclick="init()">Intentar nuevamente</button>
+      </div>
+    `;
+  }
+}
+
+init();
 </script>
 
 </body>
