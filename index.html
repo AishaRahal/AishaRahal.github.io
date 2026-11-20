@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio profesional de Aisha Rahal.">
+<title>Aisha Rahal | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+  --bg: #09090f;
+  --card: #13131e;
+  --purple: #a78bfa;
+  --text: #f5f3ff;
+  --muted: #a1a1b5;
+  --border: #29283a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+
+/* NAVBAR */
+
+nav {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.logo span { color: var(--purple); }
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-size: 13px;
+  transition: .3s;
+}
+
+.nav-links a:hover { color: var(--purple); }
+
+/* HERO */
+
+.hero {
+  min-height: 490px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.tag {
+  display: inline-block;
+  width: fit-content;
+  padding: 7px 15px;
+  border-radius: 30px;
+  border: 1px solid #a78bfa55;
+  background: #a78bfa15;
+  color: var(--purple);
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 72px);
+  line-height: 1.12;
+  letter-spacing: -3px;
+}
+
+.hero h1 span { color: var(--purple); }
+
+.hero p {
+  color: var(--muted);
+  max-width: 590px;
+  margin: 25px 0 30px;
+  font-size: 15px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn {
+  padding: 13px 22px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: .3s;
+}
+
+.btn-primary {
+  background: var(--purple);
+  color: #100d19;
+}
+
+.btn-primary:hover {
+  background: #c4b5fd;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+}
+
+.btn-outline:hover { border-color: var(--purple); }
+
+/* PROJECTS */
+
+.projects {
+  padding: 80px 0 100px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+.section-header p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.counter {
+  color: var(--purple);
+  font-size: 13px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 14px 17px;
+  border-radius: 10px;
+  margin-bottom: 28px;
+}
+
+.search-box i { color: var(--muted); }
+
+.search-box input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+  transition: .3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--purple);
+  box-shadow: 0 15px 35px #0005;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+}
+
+.folder {
+  color: var(--purple);
+  font-size: 26px;
+}
+
+.github-icon {
+  color: var(--muted);
+  font-size: 21px;
+}
+
+.project-card h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+  overflow-wrap: anywhere;
+}
+
+.project-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.language {
+  color: var(--purple);
+  font-size: 12px;
+}
+
+.repo-link {
+  font-size: 12px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.repo-link:hover { color: var(--purple); }
+
+.empty {
+  grid-column: 1/-1;
+  text-align: center;
+  color: var(--muted);
+  padding: 60px 15px;
+}
+
+/* ABOUT */
+
+.about {
+  border-top: 1px solid var(--border);
+  padding: 80px 0;
+}
+
+.about-content { max-width: 700px; }
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 35px 0;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+footer .social {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+footer a { color: var(--purple); }
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width: 550px) {
+  .grid { grid-template-columns: 1fr; }
+
+  .section-header {
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+  }
+
+  .hero h1 { letter-spacing: -2px; }
+
+  .nav-links { gap: 12px; }
+
+  .nav-links a { font-size: 11px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+  <div class="container nav-content">
+    <a href="#" class="logo">Aisha<span>.</span></a>
+
+    <div class="nav-links">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="https://github.com/AishaRahal"
+         target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PRESENTACION -->
+
+<header class="container hero">
+
+  <span class="tag">
+    <i class="fa-solid fa-code"></i>
+    PORTFOLIO DE DESARROLLO
+  </span>
+
+  <h1>
+    Hola, soy<br>
+    <span>Aisha Rahal.</span>
+  </h1>
+
+  <p>
+    Bienvenido/a a mi portfolio personal. Aquí encontrarás
+    mis proyectos, trabajos y desarrollos realizados.
+    Explora mis repositorios y descubre lo que puedo crear
+    a través de la programación.
+  </p>
+
+  <div class="buttons">
+
+    <a href="#proyectos" class="btn btn-primary">
+      Explorar proyectos
+      <i class="fa-solid fa-arrow-down"></i>
+    </a>
+
+    <a href="https://github.com/AishaRahal"
+       target="_blank" class="btn btn-outline">
+      <i class="fa-brands fa-github"></i>
+      Mi GitHub
+    </a>
+
+  </div>
+</header>
+
+<!-- PROYECTOS -->
+
+<section class="projects" id="proyectos">
+
+  <div class="container">
+
+    <div class="section-header">
+      <div>
+        <h2>Mis proyectos<span style="color:#a78bfa">.</span></h2>
+        <p>Descubre los trabajos que he realizado.</p>
+      </div>
+
+      <span class="counter" id="counter">
+        Cargando proyectos...
+      </span>
+    </div>
+
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <input
+        type="text"
+        id="search"
+        placeholder="Buscar por nombre o tecnología..."
+      >
+    </div>
+
+    <div class="grid" id="projects-grid">
+
+      <div class="empty">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+        <p>Cargando repositorios de GitHub...</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SOBRE MI -->
+
+<section class="about" id="sobre-mi">
+
+  <div class="container">
+
+    <div class="about-content">
+
+      <span class="tag">SOBRE MÍ</span>
+
+      <h2>
+        Ideas que se convierten en proyectos.
+      </h2>
+
+      <p>
+        Soy Aisha Rahal. Este portfolio reúne mis trabajos
+        y proyectos publicados en GitHub. Me apasiona
+        aprender, explorar nuevas tecnologías y desarrollar
+        soluciones creativas mediante la programación.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container">
+
+    <div class="social">
+      <a href="https://github.com/AishaRahal"
+         target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+
+    <p>
+      Desarrollado por
+      <a href="https://github.com/AishaRahal">
+        Aisha Rahal
+      </a>
+    </p>
+
+    <p>
+      © <span id="year"></span> Todos los derechos reservados.
+    </p>
+
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const USERNAME = "AishaRahal";
+
+const grid = document.getElementById("projects-grid");
+const counter = document.getElementById("counter");
+const search = document.getElementById("search");
+
+let repositories = [];
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+// CARGAR REPOSITORIOS
+
+async function loadProjects() {
+
+  try {
+
+    let page = 1;
+    let allRepos = [];
+
+    while (true) {
+
+      const response = await fetch(
+        `https://api.github.com/users/${USERNAME}/repos?per_page=100&page=${page}&sort=updated`
+      );
+
+      if (!response.ok) {
+        throw new Error("No se pudieron cargar los repositorios.");
+      }
+
+      const data = await response.json();
+
+      allRepos = allRepos.concat(data);
+
+      if (data.length < 100) break;
+
+      page++;
+    }
+
+    repositories = allRepos
+      .filter(repo => !repo.fork)
+      .sort((a, b) =>
+        new Date(b.updated_at) - new Date(a.updated_at)
+      );
+
+    renderProjects(repositories);
+
+  } catch (error) {
+
+    grid.innerHTML = `
+      <div class="empty">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <p>${escapeHTML(error.message)}</p>
+        <a href="https://github.com/${USERNAME}"
+           target="_blank">
+           Visitar GitHub
+        </a>
+      </div>
+    `;
+
+    counter.textContent = "";
+
+  }
+}
+
+// MOSTRAR PROYECTOS
+
+function renderProjects(projects) {
+
+  counter.textContent = projects.length + " proyectos";
+
+  if (projects.length === 0) {
+
+    grid.innerHTML = `
+      <div class="empty">
+        No se encontraron proyectos.
+      </div>
+    `;
+
+    return;
+  }
+
+  grid.innerHTML = projects.map(repo => {
+
+    const description = repo.description ||
+      "Explora este repositorio para conocer más sobre este proyecto.";
+
+    return `
+
+      <article class="project-card">
+
+        <div class="card-top">
+
+          <i class="fa-regular fa-folder folder"></i>
+
+          <i class="fa-brands fa-github github-icon"></i>
+
+        </div>
+
+        <h3>${escapeHTML(repo.name)}</h3>
+
+        <p>${escapeHTML(description)}</p>
+
+        <div class="card-footer">
+
+          <span class="language">
+            ${escapeHTML(repo.language || "Código")}
+          </span>
+
+          <a
+            href="${repo.html_url}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="repo-link"
+          >
+            Ver repositorio
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+    `;
+
+  }).join("");
+
+}
+
+// PROTEGER TEXTO HTML
+
+function escapeHTML(value) {
+
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;"
+  })[char]);
+
+}
+
+// BUSCADOR
+
+search.addEventListener("input", () => {
+
+  const value = search.value.toLowerCase().trim();
+
+  const filtered = repositories.filter(repo => {
+
+    return (
+      repo.name.toLowerCase().includes(value) ||
+      (repo.description || "").toLowerCase().includes(value) ||
+      (repo.language || "").toLowerCase().includes(value)
+    );
+
+  });
+
+  renderProjects(filtered);
+
+});
+
+// INICIAR
+
+loadProjects();
+
+</script>
+
+</body>
+</html>
